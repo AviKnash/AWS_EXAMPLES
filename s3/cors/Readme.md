@@ -47,4 +47,14 @@ aws s3api put-bucket-website --bucket cors-fun-test-2 --website-configuration fi
 aws s3 cp hello.js s3://cors-fun-test-2
 
 
-## Apply cors policy
+## Create API gateway and test endpoint
+
+https://uihvsg0f3g.execute-api.us-east-1.amazonaws.com/prod/hello
+
+curl -X POST "https://uihvsg0f3g.execute-api.us-east-1.amazonaws.com/prod/hello" -H "Content-Type: application/json"
+
+
+## Set cors on our bucket
+
+aws s3api put-bucket-cors --bucket cors-fun-test --cors-configuration file://cors.json
+
