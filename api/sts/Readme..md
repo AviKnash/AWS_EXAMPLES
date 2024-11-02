@@ -34,3 +34,4 @@ aws iam delete-user-policy --user-name AviTest --policy-name StsAssumePolicy
 aws iam delete-access-key --access-key-id  --user-name AviTest
 
 aws iam delete-user --user-name AviTest
+
